@@ -4,9 +4,12 @@
   //bedrooms
   //floors
   //years
-  static double[][] x = [];
+  static double[][] x = default!;
+
   //prices
-  static double[] y = [];
+  static double[] y = default!;
+
+  static int m = default!;
 
   static void Main()
   {
@@ -28,17 +31,6 @@
       )
       .ToArray();
 
-    Console.WriteLine(x[0][13]);
-
-
-    for (int houseI = 13; houseI < 20; houseI++)
-    {
-      Console.Write(
-        "size (sqft): " + x[0][houseI] +
-        ", floors: " + x[1][houseI] +
-        ", bedrooms: " + x[2][houseI] +
-        ", age: " + x[3][houseI]);
-      Console.WriteLine(", PRICE (1000$): " + y[houseI]);
-    }
+    m = y.Length;
   }
 }
