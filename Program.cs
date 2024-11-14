@@ -5,11 +5,10 @@
   //floors
   //years
   static double[][] x = default!;
-
   //prices
   static double[] y = default!;
-
   static int m = default!;
+  static int n = default!;
 
   static void Main()
   {
@@ -31,6 +30,7 @@
       )
       .ToArray();
 
-    m = y.Length;
+    m = x.Length;
+    n = x[0].Length;
   }
 }
