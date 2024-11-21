@@ -21,16 +21,10 @@
       )
       .ToArray();
 
-    y = lines.Select(line => line[^1]).ToArray();
-
-    x = Enumerable
-      .Range(0, lines[0].Length - 1)
-      .Select(columnI =>
-        lines.Select(line => line[columnI]).ToArray()
-      )
-      .ToArray();
+    x = (double[][])lines.Select(line => line[..^1]);
+    y = (double[])lines.Select(line => line[^1]);
 
     m = x.Length;
-    n = x[0].Length;
+    n = y.Length;
   }
 }
